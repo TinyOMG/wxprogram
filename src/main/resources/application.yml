@@ -1,0 +1,13 @@
+spring :
+  application:
+    name: provider
+  datasource:
+    username: root
+    password: yuzhe19940615
+    url: jdbc:mysql://122.51.207.132:3306/mysql?useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.jdbc.Driver
+    hikari:
+      connection-timeout: 6000
+      maximum-pool-size: 5
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml

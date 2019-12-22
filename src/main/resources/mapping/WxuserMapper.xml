@@ -28,7 +28,7 @@
     delete from WXUSER
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="entity.Wxuser" >
+  <insert id="insert" parameterType="entity.Wxuser" keyProperty="id" useGeneratedKeys="true">
     insert into WXUSER (id, openid, nickname, 
       avatarurl, gender, country, 
       province, city, language, 
@@ -38,7 +38,7 @@
       #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{language,jdbcType=VARCHAR}, 
       #{ctime,jdbcType=TIMESTAMP}, #{mobile,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="entity.Wxuser" >
+  <insert id="insertSelective" parameterType="entity.Wxuser" keyProperty="id" useGeneratedKeys="true">
     insert into WXUSER
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >

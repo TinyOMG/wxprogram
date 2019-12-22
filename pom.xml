@@ -83,28 +83,7 @@
         </dependency>
 
 
-       <!--json-->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>2.9.9</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.9.9.1</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.fasterxml.jackson.core</groupId>
-                    <artifactId>jackson-annotations</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>2.9.9</version>
-        </dependency>
+
 
 
         <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
@@ -115,13 +94,6 @@
         </dependency>
 
 
-        <!-- https://mvnrepository.com/artifact/io.xiaper/xiaper-spring-boot-wechat -->
-        <dependency>
-            <groupId>io.xiaper</groupId>
-            <artifactId>xiaper-spring-boot-wechat</artifactId>
-            <version>2.1.6.RELEASE</version>
-            <scope>provided</scope>
-        </dependency>
 
 
     </dependencies>

@@ -16,6 +16,11 @@ public class WxuserServiceImpl implements WxuserService {
     }
 
     @Override
+    public Wxuser selectByOpenId(String openid) {
+        return wm.selectByOpenId(openid);
+    }
+
+    @Override
     public int insert(Wxuser record) {
         return wm.insert(record);
     }

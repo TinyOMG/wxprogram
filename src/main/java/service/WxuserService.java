@@ -4,6 +4,7 @@ import entity.Wxuser;
 
 public interface WxuserService {
     int deleteByPrimaryKey(Integer id);
+    Wxuser selectByOpenId(String openid);
 
     int insert(Wxuser record);
 

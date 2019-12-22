@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"controller","serviceimpl"})
+@ComponentScan({"controller","serviceimpl","util"})
 @MapperScan("mapper")
 public class WxprogramApplication {
 

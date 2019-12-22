@@ -24,6 +24,13 @@
     from WXUSER
     where id = #{id,jdbcType=INTEGER}
   </select>
+
+  <select id="selectByOpenId" resultMap="BaseResultMap">
+
+    select    <include refid="Base_Column_List" /> from WXUSER where openid=#{openid}
+  </select>
+
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from WXUSER
     where id = #{id,jdbcType=INTEGER}

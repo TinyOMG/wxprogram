@@ -11,7 +11,7 @@ public class Wxuser {
 
     private String avatarurl;
 
-    private Boolean gender;
+    private String gender;
 
     private String country;
 
@@ -21,7 +21,7 @@ public class Wxuser {
 
     private String language;
 
-    private Date ctime;
+    private String ctime;
 
     private String mobile;
 
@@ -38,7 +38,7 @@ public class Wxuser {
     }
 
     public void setOpenid(String openid) {
-        this.openid = openid == null ? null : openid.trim();
+        this.openid = openid;
     }
 
     public String getNickname() {
@@ -46,7 +46,7 @@ public class Wxuser {
     }
 
     public void setNickname(String nickname) {
-        this.nickname = nickname == null ? null : nickname.trim();
+        this.nickname = nickname;
     }
 
     public String getAvatarurl() {
@@ -54,14 +54,14 @@ public class Wxuser {
     }
 
     public void setAvatarurl(String avatarurl) {
-        this.avatarurl = avatarurl == null ? null : avatarurl.trim();
+        this.avatarurl = avatarurl;
     }
 
-    public Boolean getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Boolean gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -70,7 +70,7 @@ public class Wxuser {
     }
 
     public void setCountry(String country) {
-        this.country = country == null ? null : country.trim();
+        this.country = country;
     }
 
     public String getProvince() {
@@ -78,7 +78,7 @@ public class Wxuser {
     }
 
     public void setProvince(String province) {
-        this.province = province == null ? null : province.trim();
+        this.province = province;
     }
 
     public String getCity() {
@@ -86,7 +86,7 @@ public class Wxuser {
     }
 
     public void setCity(String city) {
-        this.city = city == null ? null : city.trim();
+        this.city = city;
     }
 
     public String getLanguage() {
@@ -94,14 +94,14 @@ public class Wxuser {
     }
 
     public void setLanguage(String language) {
-        this.language = language == null ? null : language.trim();
+        this.language = language;
     }
 
-    public Date getCtime() {
+    public String getCtime() {
         return ctime;
     }
 
-    public void setCtime(Date ctime) {
+    public void setCtime(String ctime) {
         this.ctime = ctime;
     }
 
@@ -110,7 +110,7 @@ public class Wxuser {
     }
 
     public void setMobile(String mobile) {
-        this.mobile = mobile == null ? null : mobile.trim();
+        this.mobile = mobile;
     }
 
     @Override
@@ -120,12 +120,12 @@ public class Wxuser {
                 ", openid='" + openid + '\'' +
                 ", nickname='" + nickname + '\'' +
                 ", avatarurl='" + avatarurl + '\'' +
-                ", gender=" + gender +
+                ", gender='" + gender + '\'' +
                 ", country='" + country + '\'' +
                 ", province='" + province + '\'' +
                 ", city='" + city + '\'' +
                 ", language='" + language + '\'' +
-                ", ctime=" + ctime +
+                ", ctime='" + ctime + '\'' +
                 ", mobile='" + mobile + '\'' +
                 '}';
     }

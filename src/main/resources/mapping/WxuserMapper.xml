@@ -6,12 +6,12 @@
     <result column="openid" property="openid" jdbcType="VARCHAR" />
     <result column="nickname" property="nickname" jdbcType="VARCHAR" />
     <result column="avatarurl" property="avatarurl" jdbcType="VARCHAR" />
-    <result column="gender" property="gender" jdbcType="BIT" />
+    <result column="gender" property="gender" jdbcType="VARCHAR" />
     <result column="country" property="country" jdbcType="VARCHAR" />
     <result column="province" property="province" jdbcType="VARCHAR" />
     <result column="city" property="city" jdbcType="VARCHAR" />
     <result column="language" property="language" jdbcType="VARCHAR" />
-    <result column="ctime" property="ctime" jdbcType="TIMESTAMP" />
+    <result column="ctime" property="ctime" jdbcType="VARCHAR" />
     <result column="mobile" property="mobile" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
@@ -26,8 +26,7 @@
   </select>
 
   <select id="selectByOpenId" resultMap="BaseResultMap">
-
-    select    <include refid="Base_Column_List" /> from WXUSER where openid=#{openid}
+    select   <include refid="Base_Column_List" /> from WXUSER where openid=#{openid}
   </select>
 
 
@@ -41,9 +40,9 @@
       province, city, language, 
       ctime, mobile)
     values (#{id,jdbcType=INTEGER}, #{openid,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR}, 
-      #{avatarurl,jdbcType=VARCHAR}, #{gender,jdbcType=BIT}, #{country,jdbcType=VARCHAR}, 
+      #{avatarurl,jdbcType=VARCHAR}, #{gender,jdbcType=VARCHAR}, #{country,jdbcType=VARCHAR},
       #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{language,jdbcType=VARCHAR}, 
-      #{ctime,jdbcType=TIMESTAMP}, #{mobile,jdbcType=VARCHAR})
+      #{ctime,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="entity.Wxuser" keyProperty="id" useGeneratedKeys="true">
     insert into WXUSER
@@ -96,7 +95,7 @@
         #{avatarurl,jdbcType=VARCHAR},
       </if>
       <if test="gender != null" >
-        #{gender,jdbcType=BIT},
+        #{gender,jdbcType=VARCHAR},
       </if>
       <if test="country != null" >
         #{country,jdbcType=VARCHAR},
@@ -111,7 +110,7 @@
         #{language,jdbcType=VARCHAR},
       </if>
       <if test="ctime != null" >
-        #{ctime,jdbcType=TIMESTAMP},
+        #{ctime,jdbcType=VARCHAR},
       </if>
       <if test="mobile != null" >
         #{mobile,jdbcType=VARCHAR},
@@ -131,7 +130,7 @@
         avatarurl = #{avatarurl,jdbcType=VARCHAR},
       </if>
       <if test="gender != null" >
-        gender = #{gender,jdbcType=BIT},
+        gender = #{gender,jdbcType=VARCHAR},
       </if>
       <if test="country != null" >
         country = #{country,jdbcType=VARCHAR},
@@ -146,7 +145,7 @@
         language = #{language,jdbcType=VARCHAR},
       </if>
       <if test="ctime != null" >
-        ctime = #{ctime,jdbcType=TIMESTAMP},
+        ctime = #{ctime,jdbcType=VARCHAR},
       </if>
       <if test="mobile != null" >
         mobile = #{mobile,jdbcType=VARCHAR},
@@ -159,12 +158,12 @@
     set openid = #{openid,jdbcType=VARCHAR},
       nickname = #{nickname,jdbcType=VARCHAR},
       avatarurl = #{avatarurl,jdbcType=VARCHAR},
-      gender = #{gender,jdbcType=BIT},
+      gender = #{gender,jdbcType=VARCHAR},
       country = #{country,jdbcType=VARCHAR},
       province = #{province,jdbcType=VARCHAR},
       city = #{city,jdbcType=VARCHAR},
       language = #{language,jdbcType=VARCHAR},
-      ctime = #{ctime,jdbcType=TIMESTAMP},
+      ctime = #{ctime,jdbcType=VARCHAR},
       mobile = #{mobile,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>

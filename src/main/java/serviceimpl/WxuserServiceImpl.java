@@ -12,6 +12,7 @@ public class WxuserServiceImpl implements WxuserService {
     WxuserMapper wm;
     @Override
     public int deleteByPrimaryKey(Integer id) {
+
         return wm.deleteByPrimaryKey(id);
     }
 
